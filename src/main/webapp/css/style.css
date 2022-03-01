@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: #86af49;
+}
+
+a:link, a:visited {
+	color: black;
+}
