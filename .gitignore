@@ -27,4 +27,5 @@ replay_pid*
 .settings/
 
 # Persistentce file
-META-INF/persistence.xml 
+target/m2e-wtp/web-resources/META-INF/persistence.xml
+target/m2e-wtp/web-resources/META-INF/maven/Events/Events/pom.properties
