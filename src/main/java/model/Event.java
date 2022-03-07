@@ -80,6 +80,10 @@ public class Event {
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
+	
+	public void setDate(String date) {
+		this.date = convertDate(date);
+	}
 
 	@Override
 	public String toString() {

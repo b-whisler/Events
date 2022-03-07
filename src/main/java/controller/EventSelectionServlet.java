@@ -49,6 +49,8 @@ public class EventSelectionServlet extends HttpServlet {
 					Integer selectId = Integer.parseInt(request.getParameter("id"));
 					Event eventToEdit = eh.getEventByID(selectId);
 					request.setAttribute("eventToEdit", eventToEdit);
+					VenueHelper vh = new VenueHelper();
+					request.setAttribute("allVenues", vh.getAllVenues());
 					path = "/edit-event.jsp";	
 			} else if (action.equals("Add")) {
 			path = "/add-event.html";

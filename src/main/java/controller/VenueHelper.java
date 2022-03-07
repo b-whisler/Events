@@ -55,4 +55,12 @@ public class VenueHelper {
 		em.close();
 		return result;
 	}
+	
+	public void editVenue (Venue toEdit) {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		em.merge(toEdit);
+		em.getTransaction().commit();
+		em.close();
+	}
 }
