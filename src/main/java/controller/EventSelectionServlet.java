@@ -53,7 +53,7 @@ public class EventSelectionServlet extends HttpServlet {
 					request.setAttribute("allVenues", vh.getAllVenues());
 					path = "/edit-event.jsp";	
 			} else if (action.equals("Add")) {
-			path = "/add-event.html";
+			path = "/getVenuesForEventServlet";
 			}
 		} catch (NumberFormatException e) {
 			//Invalid ID selection, simply returns the user back to the list
