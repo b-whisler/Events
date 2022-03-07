@@ -24,7 +24,7 @@ public class Venue {
 	private String name;
 	private String address;
 	private String ownerName;
-	@OneToMany(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
+	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.REMOVE}, fetch=FetchType.EAGER)
 	private List<Event> listOfEvents;
 	
 	public Venue() {

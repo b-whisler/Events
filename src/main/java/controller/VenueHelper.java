@@ -12,6 +12,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
+import model.Event;
 import model.Venue;
 
 public class VenueHelper {
@@ -32,6 +33,10 @@ public class VenueHelper {
 		typedQuery.setParameter("selectedId", v.getId());
 		typedQuery.setMaxResults(1);
 		Venue result = typedQuery.getSingleResult();
+		EventHelper eh = new EventHelper();
+		for (Event ev : eh.getAllEventsOfVenue(v)) {
+			eh.removeEvent(ev);
+		}
 		em.remove(result);
 		em.getTransaction().commit();
 		em.close();
