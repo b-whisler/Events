@@ -15,6 +15,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import controller.VenueHelper;
+
 @Entity
 @Table(name="event")
 public class Event {
@@ -22,7 +24,7 @@ public class Event {
 	@GeneratedValue
 	@Column(name="ID")
 	private int id;
-	@ManyToOne(cascade=CascadeType.PERSIST)
+	@ManyToOne(cascade=CascadeType.MERGE)
 	private Venue venue;
 	@Column(name="NAME")
 	private String name;
@@ -38,6 +40,13 @@ public class Event {
 		this.venue = venue;
 		this.name = name;
 		this.date = date;
+	}
+	
+	public Event(String name, int venueID, String date) {
+		VenueHelper vh = new VenueHelper();
+		this.name = name;
+		this.venue = vh.getVenueByID(venueID);
+		this.date = convertDate(date);
 	}
 
 	public int getId() {
@@ -77,7 +86,14 @@ public class Event {
 		return "Event [id=" + id + ", venue=" + venue + ", name=" + name + ", date=" + date + "]";
 	}
 	
-	
+	private LocalDate convertDate(String formDate) {
+		int year = Integer.parseInt(formDate.substring(0, 4));
+		int month = Integer.parseInt(formDate.substring(5, 7));
+		int day = Integer.parseInt(formDate.substring(8, 10));
+		LocalDate convertedDate = LocalDate.of(year, month, day);
+		//LocalDate convertedDate = LocalDate.now();
+		return convertedDate;
+	}
 	
 	
 }

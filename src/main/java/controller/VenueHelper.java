@@ -42,4 +42,12 @@ public class VenueHelper {
 		List<Venue> allVenues = em.createQuery("SELECT v FROM Venue v").getResultList();
 		return allVenues;
 		}
+	
+	public Venue getVenueByID(int idToFind) {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		Venue result = em.find(Venue.class, idToFind);
+		em.close();
+		return result;
+	}
 }
