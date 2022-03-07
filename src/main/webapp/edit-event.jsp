@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div>
+<h1>Edit Event</h1>
 <form action = "editEventServlet" method="post">
 Name: <input type = "text" name = "name" value="${eventToEdit.name}"><br />
 Venue: <select name="venue">
@@ -21,5 +23,6 @@ Date: <input type = "date" name = "date" value="${eventToEdit.date}"><br />
 <input type = "submit" value="Edit Event">
 </form> <br />
 <a href="index.html">Back to index</a>
+</div>
 </body>
 </html>

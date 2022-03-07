@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div>
+<h1>Event Management</h1>
    <form method = "post" action = "eventSelectionServlet">
 <table>
 <tr>
@@ -33,5 +35,6 @@
 <input type = "submit" value = "Delete" name = "userSelection">
 </form>  
 <a href="index.html">Back to home</a>
+</div>
 </body>
 </html>

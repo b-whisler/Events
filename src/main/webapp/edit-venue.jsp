@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div>
+<h1>Edit Venue</h1>
 <form action = "editVenueServlet" method="post">
 Name: <input type = "text" name = "name" value="${venueToEdit.name}"><br />
 Address: <input type = "text" name = "address" value="${venueToEdit.address}"><br />
@@ -17,5 +19,6 @@ Owner's name: <input type = "text" name = "owner" value="${venueToEdit.ownerName
 <input type = "submit" value="Edit Venue">
 </form> <br />
 <a href="index.html">Back to index</a>
+</div>
 </body>
 </html>

@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div>
+<h1>Add Event</h1>
 <form action = "addEventServlet" method="post">
 Name: <input type = "text" name = "name"><br />
 Venue: <select name="venue">
@@ -20,5 +22,6 @@ Date: <input type = "date" name = "date"><br />
 <input type = "submit" value="Add Event">
 </form> <br />
 <a href="index.html">Back to index</a>
+</div>
 </body>
 </html>

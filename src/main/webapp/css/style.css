@@ -8,12 +8,52 @@ a:link, a:visited {
 	color: black;
 }
 
-li a {
+a {
 	font-size: 20px;
+	text-decoration: none;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	display:block;
+	max-width: 120px;
+	text-align: center;
+	margin-left: 38%;
+}
+
+ul {
+	list-style:none;
+}
+
+
+li {
+	
+	margin-top: 10px;
+	
 }
 
 table, th, td {
   border: 1px solid;
   border-collapse: collapse;
   padding: 5px;
+}
+
+div {
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 5px;
+	max-width: 70%;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+form, table {
+	margin:auto;
+}
+
+form {
+	display:table;
 }
