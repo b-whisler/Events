@@ -18,7 +18,7 @@ Venue: <select name="venue">
 			<option value="${venue.id}">${venue.name}</option>
 		</c:forEach>
 	</select><br />
-Date: <input type = "date" name = "date"><br />
+Date: <input type = "date" name = "date" size="12" placeholder="yyyy-mm-dd"><br />
 <input type = "submit" value="Add Event">
 </form> <br />
 <a href="index.html">Back to index</a>
